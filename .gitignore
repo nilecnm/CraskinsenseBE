@@ -1,0 +1,4 @@
+/Dataset/
+/venv/
+.DS_Store
+best_model.weights.h5
