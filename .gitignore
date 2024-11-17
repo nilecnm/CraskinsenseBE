@@ -1,4 +1,6 @@
 /Dataset/
 /venv/
+/.venv/
+/__pycache__/
 .DS_Store
 best_model.weights.h5
