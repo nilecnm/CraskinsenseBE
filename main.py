@@ -5,7 +5,6 @@ import matplotlib.pyplot  as plt
 import os
 import numpy              as np
 import tensorflow         as tf
-from tensorflow           import keras
 import matplotlib.pyplot  as plt
 import base64
 import albumentations     as A
@@ -15,7 +14,6 @@ import pandas as pd
 
 os.environ["SM_FRAMEWORK"] = "tf.keras"
 
-from tensorflow.keras.models import load_model
 import segmentation_models   as sm
 
 # fast api
@@ -123,7 +121,7 @@ async def predict(file: UploadFile = File(...)):
     return JSONResponse(content={
         "predicted_mask_base64": pred_mask_base64,
         "distibution_value": distibution_value,
-        "avg_value": avg_value,
-        "max_value": max_value,
-        "min_value": min_value,
+        "avg_value": float(avg_value),
+        "max_value": float(max_value),
+        "min_value": float(min_value),
     })
