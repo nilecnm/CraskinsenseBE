@@ -11,6 +11,7 @@ albumentations = "*"
 fastapi = "*"
 pandas = "*"
 segmentation-models = "*"
+seaborn = "*"
 
 [dev-packages]
 
